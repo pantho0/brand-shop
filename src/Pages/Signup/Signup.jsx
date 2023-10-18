@@ -1,4 +1,25 @@
+import { useContext } from "react";
+import { AuthContext } from "../../AuthProvider/AuthProvider";
+
 const Signup = () => {
+  const {createUser} = useContext(AuthContext) || {}
+  const handleCreateUser = (e) =>{
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password)
+    createUser(email, password)
+    .then(result =>{
+      console.log(result.user);
+    })
+    .catch(error =>{
+      console.log(error);
+    })
+    e.target.reset()
+  }
+
+
   return (
     <div>
       <div className="hero min-h-screen bg-base-200">
@@ -12,13 +33,14 @@ const Signup = () => {
             </p>
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form className="card-body">
+            <form onSubmit={handleCreateUser} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
                 <input
                   type="email"
+                  name="email"
                   placeholder="email"
                   className="input input-bordered"
                   required
@@ -30,6 +52,7 @@ const Signup = () => {
                 </label>
                 <input
                   type="password"
+                  name = "password"
                   placeholder="password"
                   className="input input-bordered"
                   required
