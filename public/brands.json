@@ -1,0 +1,26 @@
+[
+    {
+        "brandName": "Nike",
+        "image": "https://example.com/nike.jpg"
+    },
+    {
+        "brandName": "Adidas",
+        "image": "https://example.com/adidas.jpg"
+    },
+    {
+        "brandName": "Gucci",
+        "image": "https://example.com/gucci.jpg"
+    },
+    {
+        "brandName": "Zara",
+        "image": "https://example.com/zara.jpg"
+    },
+    {
+        "brandName": "H&M",
+        "image": "https://example.com/hm.jpg"
+    },
+    {
+        "brandName": "Levi's",
+        "image": "https://example.com/levis.jpg"
+    }
+]
