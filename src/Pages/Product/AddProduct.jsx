@@ -27,6 +27,8 @@ const AddProduct = () => {
     .then(res => res.json())
     .then(data => {
      console.log(data);
+     alert('Product Adedd To Inventory')
+     form.reset()
     })
  
  

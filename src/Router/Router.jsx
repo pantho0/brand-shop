@@ -7,6 +7,8 @@ import MainLayout from "../MainLayout/MainLayout";
 import Signup from "../Pages/Signup/Signup";
 import Login from "../Pages/Login/Login";
 import AddProduct from "../Pages/Product/AddProduct";
+import Nike from "../Pages/Brand/Brand";
+import Brand from "../Pages/Brand/Brand";
 
 export const router = createBrowserRouter([
     {
@@ -30,6 +32,11 @@ export const router = createBrowserRouter([
           path: '/addproduct',
           element: <AddProduct></AddProduct>,
           
+        },
+        {
+          path: '/brand/:brandName',
+          element : <Brand></Brand>,
+          loader: () => fetch('http://localhost:5001/products') 
         }
       ]
     },
