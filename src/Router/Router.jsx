@@ -9,6 +9,7 @@ import Login from "../Pages/Login/Login";
 import AddProduct from "../Pages/Product/AddProduct";
 import Nike from "../Pages/Brand/Brand";
 import Brand from "../Pages/Brand/Brand";
+import Details from "../Pages/Product/Details";
 
 export const router = createBrowserRouter([
     {
@@ -37,6 +38,11 @@ export const router = createBrowserRouter([
           path: '/brand/:brandName',
           element : <Brand></Brand>,
           loader: () => fetch('http://localhost:5001/products') 
+        },
+        {
+          path: '/details/:id',
+          element: <Details></Details>,
+          loader: ({params}) => fetch(`http://localhost:5001/details/${params.id}`)
         }
       ]
     },
