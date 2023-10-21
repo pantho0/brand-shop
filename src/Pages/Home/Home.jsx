@@ -67,20 +67,41 @@ const Home = () => {
           <button className="btn btn-outline btn-success ml-4">Sign Up</button>
         </div>
         <div>
-          <div className="hero min-h-screen bg-base-200">
+          <div className="hero min-h-[60] ">
             <div className="hero-content flex-col lg:flex-row-reverse">
               <img
                 src="filler-image-3.jpg"
                 className="max-w-sm rounded-lg shadow-2xl"
               />
               <div>
-                <h1 className="text-5xl font-bold">Box Office News!</h1>
+                <h1 className="text-5xl font-bold">
+                  PellentePellentesque vel seodales diam Nunc feugiat facilisis
+                  purus eu.
+                </h1>
                 <p className="py-6">
-                  Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                  assumenda excepturi exercitationem quasi. In deleniti eaque
-                  aut repudiandae et a id nisi.
+                  Suspendisse imperdiet libero euismod bibendum consequat.
+                  Phasellus impe rdiet sem neque, ac bibendum eros ultrices ut.
+                  Curabitur vel ultrices enim. Sed convallis mauris ac nibh
+                  lacinia efficitur. Phasellus vitae laoreet elit, ut tempor
+                  lectus. Etiam scelerisque justo nisi, a malesuada nisi.
                 </p>
-                <button className="btn btn-primary">Get Started</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div className="hero min-h-[60vh]">
+            <div className="hero-content flex-col lg:flex-row">
+              <img
+                src="filler-image-4.jpg"
+                className="max-w-sm rounded-lg shadow-2xl"
+              />
+              <div>
+                <h1 className="text-5xl font-bold">Vel Seodales Pellente Sellentesque Diam Nunc Feugiat Facilisis Purus Eu.</h1>
+                <p className="py-6">
+                Curabitur vel ultrices enim. Sed convallis mauris ac nibh lacinia efficitur. Phasellus vitae laoreet elit, ut tempor lectus. Etiam scelerisque justo nisi, a malesuada nisi. Suspendisse imperdiet libero euismod bibendum consequat. Phasellus impe rdiet sem neque, ac bibendum eros ultrices ut.
+                </p>
+                
               </div>
             </div>
           </div>
