@@ -7,6 +7,12 @@ const Navbar = () => {
         <NavLink to={'/'}>Home</NavLink>
       </li>
       <li>
+        <NavLink to={'/addproduct'}>Add Product</NavLink>
+      </li>
+      <li>
+        <NavLink to={'/cart'}>My Cart</NavLink>
+      </li>
+      <li>
         <NavLink to={'/signup'}>Sign Up</NavLink>
       </li>
       <li>

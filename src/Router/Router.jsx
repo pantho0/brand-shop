@@ -7,10 +7,10 @@ import MainLayout from "../MainLayout/MainLayout";
 import Signup from "../Pages/Signup/Signup";
 import Login from "../Pages/Login/Login";
 import AddProduct from "../Pages/Product/AddProduct";
-import Nike from "../Pages/Brand/Brand";
 import Brand from "../Pages/Brand/Brand";
 import Details from "../Pages/Product/Details";
 import Update from "../Pages/Product/Update";
+import Cart from "../Pages/Cart/Cart";
 
 export const router = createBrowserRouter([
     {
@@ -49,6 +49,11 @@ export const router = createBrowserRouter([
           path: '/update/:id',
           element: <Update></Update>,
           loader: ({params}) => fetch(`http://localhost:5001/update/${params.id}`)
+        },
+        {
+          path: '/cart',
+          element: <Cart></Cart>,
+          loader: () => fetch('http://localhost:5001/cart')
         }
       ]
     },
