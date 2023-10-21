@@ -13,9 +13,9 @@ const Home = () => {
   const brands = useLoaderData();
   return (
     <>
-      <div>
+      <div >
         {/* Slider Section */}
-        <div>
+        <div className="-z-10">
           <Swiper
             modules={[Navigation]}
             spaceBetween={0}
