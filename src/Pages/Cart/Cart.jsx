@@ -29,7 +29,7 @@ const Cart = () => {
 
 
   return (
-    <div>
+    <div className="h-screen">
         <div className="grid md:grid-cols-3 gap-4">
         {
         userOrder.map(showOrders => <OrdersCard key={showOrders._id} showOrders={showOrders}></OrdersCard>)

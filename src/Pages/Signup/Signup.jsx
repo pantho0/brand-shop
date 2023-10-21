@@ -1,13 +1,26 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { useState } from "react";
+
+
+
 
 const Signup = () => {
   const {createUser} = useContext(AuthContext) || {}
+  const [regError, setRegError] = useState("");
+  const [success, setSuccess] = useState("");
+
   const handleCreateUser = (e) =>{
     e.preventDefault();
+    setRegError('')
+    setSuccess('')
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
+    if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%^*?&])[A-Za-z\d@$!%^*?&]{6,}$/.test(password)){
+      setRegError('Password should be 6 characters, uppercase, lowercase & special characters')
+      return
+    }
     console.log(email, password)
     createUser(email, password)
     .then(result =>{
@@ -58,9 +71,8 @@ const Signup = () => {
                   required
                 />
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
+                  {regError && <p className="text-red-700">{regError}</p>}
+                  {success && <p className="text-green-700">{success}</p>}
                 </label>
               </div>
               <div className="form-control mt-6">

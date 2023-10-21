@@ -4,6 +4,8 @@ import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 
 
+
+
 const Details = () => {
   const {user} = useContext(AuthContext)
   const selectedBrand = useLoaderData();
@@ -16,7 +18,7 @@ const Details = () => {
 
   const cartData = {...choosedProduct, ...signedUser}
   console.log(cartData);
-    
+
   const handleCart = () =>{
     fetch(`http://localhost:5001/orders`, {
       method: "POST",
@@ -29,6 +31,7 @@ const Details = () => {
     .then(res => res.json())
     .then(data => {
       console.log(data);
+     alert('Added to inventory') 
     })
   }
 

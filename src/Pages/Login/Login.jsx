@@ -1,19 +1,25 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
+import { Navigate } from "react-router-dom";
+import { useState } from "react";
 
 const Login = () => {
   const {signIn} = useContext(AuthContext)
+  const [errorLogin, setErrorLogin] = useState("");
   const handleSignIn = e =>{
     e.preventDefault()
+    setErrorLogin("");
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
     signIn(email, password)
     .then(result =>{
       console.log(result.user);
+
     })
     .catch(error => {
       console.log(error);
+      setErrorLogin('Invalid Credentials')
     })
 
   }
@@ -55,9 +61,9 @@ const Login = () => {
                   required
                 />
                 <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
+                {errorLogin && (
+                    <p className="text-red-700 font-semibold">{errorLogin}</p>
+                  )}
                 </label>
               </div>
               <div className="form-control mt-6">
