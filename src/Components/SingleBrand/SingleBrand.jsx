@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+
 const SingleBrand = ({ item }) => {
   const { _id, name, image, brandName, description, price, rating, type } = item;
   return (
