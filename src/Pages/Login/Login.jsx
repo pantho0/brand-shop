@@ -1,11 +1,16 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
-  const {signIn} = useContext(AuthContext)
+  const {signIn, googleLogin} = useContext(AuthContext)
   const [errorLogin, setErrorLogin] = useState("");
+  const handleGoogle = () =>{
+    googleLogin()
+ }
   const handleSignIn = e =>{
     e.preventDefault()
     setErrorLogin("");
@@ -68,9 +73,13 @@ const Login = () => {
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Login</button>
-               <div className="text-center">
+               <div className="text-center">  
                <p className="mt-4">Don't have an account? <span className="text-blue-600 font-medium"><Link to={'/signup'}>Register</Link></span> here. </p>
                </div>
+              </div>
+              <div className="flex justify-center items-center">
+              <div><p className="font-medium">Login with</p></div>
+              <div><FcGoogle className="text-3xl cursor-pointer" onClick={handleGoogle}></FcGoogle></div>
               </div>
             </form>
           </div>

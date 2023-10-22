@@ -2,11 +2,16 @@ import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { FcGoogle } from "react-icons/fc";
 
 const Signup = () => {
-  const { createUser } = useContext(AuthContext) || {};
+  const { createUser, googleLogin } = useContext(AuthContext) || {};
   const [regError, setRegError] = useState("");
   const [success, setSuccess] = useState("");
+
+  const handleGoogle = () =>{
+     googleLogin()
+  }
 
   const handleCreateUser = (e) => {
     e.preventDefault();
@@ -89,6 +94,10 @@ const Signup = () => {
                     here.{" "}
                   </p>
                 </div>
+              </div>
+              <div className="flex justify-center items-center">
+              <div><p className="font-medium">Signup with</p></div>
+              <div><FcGoogle className="text-3xl cursor-pointer" onClick={handleGoogle}></FcGoogle></div>
               </div>
             </form>
           </div>
