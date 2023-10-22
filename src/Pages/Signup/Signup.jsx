@@ -1,37 +1,40 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
 import { useState } from "react";
-
-
-
+import { Link } from "react-router-dom";
 
 const Signup = () => {
-  const {createUser} = useContext(AuthContext) || {}
+  const { createUser } = useContext(AuthContext) || {};
   const [regError, setRegError] = useState("");
   const [success, setSuccess] = useState("");
 
-  const handleCreateUser = (e) =>{
+  const handleCreateUser = (e) => {
     e.preventDefault();
-    setRegError('')
-    setSuccess('')
+    setRegError("");
+    setSuccess("");
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    if(!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%^*?&])[A-Za-z\d@$!%^*?&]{6,}$/.test(password)){
-      setRegError('Password should be 6 characters, uppercase, lowercase & special characters')
-      return
+    if (
+      !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%^*?&])[A-Za-z\d@$!%^*?&]{6,}$/.test(
+        password
+      )
+    ) {
+      setRegError(
+        "Password should be 6 characters, uppercase, lowercase & special characters"
+      );
+      return;
     }
-    console.log(email, password)
+    console.log(email, password);
     createUser(email, password)
-    .then(result =>{
-      console.log(result.user);
-    })
-    .catch(error =>{
-      console.log(error);
-    })
-    e.target.reset()
-  }
-
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    e.target.reset();
+  };
 
   return (
     <div>
@@ -65,7 +68,7 @@ const Signup = () => {
                 </label>
                 <input
                   type="password"
-                  name = "password"
+                  name="password"
                   placeholder="password"
                   className="input input-bordered"
                   required
@@ -77,6 +80,15 @@ const Signup = () => {
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Sign Up</button>
+                <div className="text-center">
+                  <p className="mt-4">
+                    Already have an account?{" "}
+                    <span className="text-blue-600 font-medium">
+                      <Link to={"/login"}>Login</Link>
+                    </span>{" "}
+                    here.{" "}
+                  </p>
+                </div>
               </div>
             </form>
           </div>

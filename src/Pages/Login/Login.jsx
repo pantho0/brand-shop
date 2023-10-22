@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../AuthProvider/AuthProvider";
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useState } from "react";
 
 const Login = () => {
@@ -68,6 +68,9 @@ const Login = () => {
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-primary">Login</button>
+               <div className="text-center">
+               <p className="mt-4">Don't have an account? <span className="text-blue-600 font-medium"><Link to={'/signup'}>Register</Link></span> here. </p>
+               </div>
               </div>
             </form>
           </div>
