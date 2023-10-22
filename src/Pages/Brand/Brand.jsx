@@ -53,13 +53,22 @@ const Brand = () => {
         </div>
       </div>
         
-        {/* ======= */}
-        <div className="grid md:grid-cols-3 justify-between gap-4" >
-            {
-                items.map(item => <SingleBrand key={item.i} item={item}></SingleBrand>)
-            }
-        </div>
-        </div>
+   
+        { items.length > 0 ? (
+              <div className="grid md:grid-cols-3 justify-between gap-4" >
+            
+              {items.map(item => <SingleBrand key={item.i} item={item}></SingleBrand>)}
+              </div>
+            ) 
+            :
+            (
+            <div className="h-screen justify-center items-center">
+              <h4 className="text-4xl mt-20">No products available right now.</h4>
+            </div>
+            )  
+        }
+            
+      </div>
     );
 };
 

@@ -13,8 +13,8 @@ const Cart = () => {
   const orders = useLoaderData();
   console.log(orders);
 
-  const [userOrder, setOrder] = useState([]);
-  
+  const [userOrder, setOrder] = useState([]) || [];
+
   const orderUser = orders.email;
   console.log(orderUser);
 
@@ -24,18 +24,18 @@ const Cart = () => {
     setOrder(getOrders);
   }, [orders, signedUser]);
 
-
-
-
-
   return (
     <div>
-        <div className="px-10">
-        {
-        userOrder.map(showOrders => <OrdersCard key={showOrders._id} showOrders={showOrders}></OrdersCard>)
-        }
-
-        </div>
+      <div className="px-10">
+        {userOrder.length > 0 ? (
+          userOrder.map((showOrders) => (
+            <OrdersCard key={showOrders._id} showOrders={showOrders}></OrdersCard>
+          )))
+          :
+          (<div className="h-screen flex justify-center items-center">
+            <h4>No products added to cart yet.</h4>
+          </div>)}
+      </div>
     </div>
   );
 };
