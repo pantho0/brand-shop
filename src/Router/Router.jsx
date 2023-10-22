@@ -12,11 +12,13 @@ import Details from "../Pages/Product/Details";
 import Update from "../Pages/Product/Update";
 import Cart from "../Pages/Cart/Cart";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import ErrorPage from "../Pages/404/ErrorPage";
 
 export const router = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout></MainLayout>,
+      errorElement:<ErrorPage></ErrorPage>,
       children:[
         {
           path:"/",
