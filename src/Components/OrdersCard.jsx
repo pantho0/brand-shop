@@ -16,12 +16,13 @@ const OrdersCard = ({showOrders}) => {
     }
     return (
         <div>
-            <div
+            <div 
             
-            className="card  card-side bg-base-100 shadow-xl"
+            className="card  card-side bg-base-100 shadow-xl mb-10 border-2 border-dashed"
           >
             <figure>
               <img 
+                className="w-52"
                 src={showOrders.image}
                 alt="Movie"
               />

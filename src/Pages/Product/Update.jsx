@@ -1,5 +1,8 @@
 
-import { useLoaderData } from "react-router-dom";
+import { Navigate, useLoaderData } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 
 const Update = () => {
@@ -21,7 +24,7 @@ const Update = () => {
         const product = {
             name, image, brandName, type, price, description, rating
         }
-
+        const notify = () => toast("Product Updated");
         console.log(product);
 
         fetch(`http://localhost:5001/update/${_id}`,{
@@ -34,8 +37,9 @@ const Update = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            alert('Product Updated')
-            form.reset()
+            notify();
+            
+
         })
    }
 
@@ -43,6 +47,19 @@ const Update = () => {
 
     return (
         <div>
+        <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+      <ToastContainer />
         <div className="text-center text-4xl mt-18">
           <h2>Add Product</h2>
         </div>

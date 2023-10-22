@@ -29,8 +29,8 @@ const Cart = () => {
 
 
   return (
-    <div className="h-screen">
-        <div className="grid md:grid-cols-3 gap-4">
+    <div>
+        <div className="px-10">
         {
         userOrder.map(showOrders => <OrdersCard key={showOrders._id} showOrders={showOrders}></OrdersCard>)
         }

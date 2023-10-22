@@ -33,7 +33,7 @@ const Brand = () => {
           <Swiper
             modules={[Navigation]}
             spaceBetween={0}
-            slidesPerView={2}
+            slidesPerView={1}
             navigation
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
@@ -41,19 +41,13 @@ const Brand = () => {
             onSlideChange={() => console.log("slide change")}
           >
             <SwiperSlide>
-              <img className="h-[768px] w-full" src="/1.jpg" alt="" />
+              <img className="h-[65vh] w-full" src="/12.webp" alt="" />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="h-[768px] w-full" src="/2.jpg" alt="" />
+              <img className="h-[65vh] w-full" src="/13.webp" alt="" />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="h-[768px] w-full" src="/3.jpg" alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img className="h-[768px] w-full" src="/4.jpg" alt="" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img className="h-[768px] w-full" src="/5.jpg" alt="" />
+              <img className="h-[65vh] w-full" src="/14.webp" alt="" />
             </SwiperSlide>
           </Swiper>
         </div>
