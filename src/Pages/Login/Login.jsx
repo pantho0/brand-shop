@@ -10,6 +10,10 @@ const Login = () => {
   const [errorLogin, setErrorLogin] = useState("");
   const handleGoogle = () =>{
     googleLogin()
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+    })
  }
   const handleSignIn = e =>{
     e.preventDefault()
