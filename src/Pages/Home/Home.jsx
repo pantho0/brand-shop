@@ -13,7 +13,7 @@ const Home = () => {
   const brands = useLoaderData();
   return (
     <>
-      <div >
+      <div>
         {/* Slider Section */}
         <div className="-z-10">
           <Swiper
@@ -42,10 +42,32 @@ const Home = () => {
       <div className="mt-11">
         {/* Brands Section */}
         <h2 className="text-4xl text-center">Available Brands</h2>
-        <div className="grid md:grid-cols-3 gap-4 mt-20">
+        <div className="grid justify-center md:grid-cols-2 lg:grid-cols-3 gap-4 mt-20">
           {brands.map((brand) => (
             <BrandCards key={brand.i} brand={brand}></BrandCards>
           ))}
+        </div>
+
+        <div>
+          <div className="flex flex-col mt-4 md:flex-row items-center justify-center mt-4 gap-8">
+            <img
+              src="filler-image-3.jpg"
+              className="max-w-sm rounded-full shadow-2xl"
+            />
+            <div>
+              <h1 className="text-3xl text-center font-bold">
+                PellentePellentesque vel seodales <br /> diam Nunc feugiat
+                facilisis purus eu.
+              </h1>
+              <p className="py-6 text-center px-4 md:py-6 text-lg text-center">
+                Suspendisse imperdiet libero euismod bibendum consequat.
+                Phasellus impe rdiet sem neque, ac bibendum eros ultrices ut.
+                Curabitur vel ultrices enim. Sed convallis mauris ac nibh
+                lacinia efficitur. Phasellus vitae laoreet elit, ut tempor
+                lectus. Etiam scelerisque justo nisi, a malesuada nisi.
+              </p>
+            </div>
+          </div>
         </div>
         <div className="mt-20 text-center space-y-8 pt-10 pb-10 bg-black text-white">
           <h2 className="text-4xl">Sign Up For News Letter</h2>
@@ -61,43 +83,24 @@ const Home = () => {
           <button className="btn btn-outline btn-success ml-4">Sign Up</button>
         </div>
         <div>
-          <div className="hero min-h-[60] ">
-            <div className="hero-content flex-col lg:flex-row-reverse">
-              <img
-                src="filler-image-3.jpg"
-                className="max-w-sm rounded-lg shadow-2xl"
-              />
-              <div>
-                <h1 className="text-5xl font-bold">
-                  PellentePellentesque vel seodales diam Nunc feugiat facilisis
-                  purus eu.
-                </h1>
-                <p className="py-6">
-                  Suspendisse imperdiet libero euismod bibendum consequat.
-                  Phasellus impe rdiet sem neque, ac bibendum eros ultrices ut.
-                  Curabitur vel ultrices enim. Sed convallis mauris ac nibh
-                  lacinia efficitur. Phasellus vitae laoreet elit, ut tempor
-                  lectus. Etiam scelerisque justo nisi, a malesuada nisi.
-                </p>
-              </div>
+          <div className="flex flex-col mt-4 mb-4 md:flex-row items-center justify-center mt-4 mb-4 gap-8">
+            <div>
+              <h1 className="text-3xl text-center font-bold">
+                Vel Seodales Pellente Sellentesque Diam Nunc Feugiat Facilisis
+                Purus Eu.
+              </h1>
+              <p className="py-6 text-center px-4 md:py-6 text-lg text-center">
+                Curabitur vel ultrices enim. Sed convallis mauris ac nibh
+                lacinia efficitur. Phasellus vitae laoreet elit, ut tempor
+                lectus. Etiam scelerisque justo nisi, a malesuada nisi.
+                Suspendisse imperdiet libero euismod bibendum consequat.
+                Phasellus impe rdiet sem neque, ac bibendum eros ultrices ut.
+              </p>
             </div>
-          </div>
-        </div>
-        <div>
-          <div className="hero min-h-[60vh]">
-            <div className="hero-content flex-col lg:flex-row">
-              <img
-                src="filler-image-4.jpg"
-                className="max-w-sm rounded-lg shadow-2xl"
-              />
-              <div>
-                <h1 className="text-5xl font-bold">Vel Seodales Pellente Sellentesque Diam Nunc Feugiat Facilisis Purus Eu.</h1>
-                <p className="py-6">
-                Curabitur vel ultrices enim. Sed convallis mauris ac nibh lacinia efficitur. Phasellus vitae laoreet elit, ut tempor lectus. Etiam scelerisque justo nisi, a malesuada nisi. Suspendisse imperdiet libero euismod bibendum consequat. Phasellus impe rdiet sem neque, ac bibendum eros ultrices ut.
-                </p>
-                
-              </div>
-            </div>
+            <img
+              src="filler-image-4.jpg"
+              className="max-w-sm rounded-full shadow-2xl"
+            />
           </div>
         </div>
       </div>

@@ -51,7 +51,7 @@ const Details = () => {
       />
       ;
       <ToastContainer />;
-      <div className="card card-side bg-base-100 shadow-xl">
+      <div className="card  md:card-side bg-base-100 shadow-xl">
         <figure>
           <img src={image} alt={brandName} />
         </figure>
