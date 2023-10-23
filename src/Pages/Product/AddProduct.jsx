@@ -17,7 +17,7 @@ const AddProduct = () => {
  
      console.log(product);
  
-    fetch("http://localhost:5001/addproduct", {
+    fetch("https://brand-shop-server-beryl-five.vercel.app/addproduct", {
      method : "POST",
      headers : {
       "Content-Type" : "application/json",

@@ -6,7 +6,7 @@ const OrdersCard = ({showOrders}) => {
     console.log(showOrders);
     const handleDelete = (_id) => {
       console.log(_id);
-      fetch(`http://localhost:5001/cart/${_id}`, {
+      fetch(`https://brand-shop-server-beryl-five.vercel.app/cart/${_id}`, {
         method : "DELETE",
       })
       .then(res => res.json())

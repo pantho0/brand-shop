@@ -19,7 +19,7 @@ const Details = () => {
 
   const handleCart = () => {
     fetch(
-      `http://localhost:5001/orders`,
+      `https://brand-shop-server-beryl-five.vercel.app/orders`,
       {
         method: "POST",
         headers: {

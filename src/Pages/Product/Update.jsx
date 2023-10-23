@@ -27,7 +27,7 @@ const Update = () => {
         const notify = () => toast("Product Updated");
         console.log(product);
 
-        fetch(`http://localhost:5001/update/${_id}`,{
+        fetch(`https://brand-shop-server-beryl-five.vercel.app/update/${_id}`,{
             method: "PUT",
             headers: {
                 'content-type' : 'application/json'

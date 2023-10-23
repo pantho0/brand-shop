@@ -41,22 +41,22 @@ export const router = createBrowserRouter([
         {
           path: '/brand/:brandName',
           element : <Brand></Brand>,
-          loader: () => fetch('http://localhost:5001/products') 
+          loader: () => fetch('https://brand-shop-server-beryl-five.vercel.app/products') 
         },
         {
           path: '/details/:id',
           element: <PrivateRoute><Details></Details></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5001/details/${params.id}`)
+          loader: ({params}) => fetch(`https://brand-shop-server-beryl-five.vercel.app/details/${params.id}`)
         },
         {
           path: '/update/:id',
           element: <PrivateRoute><Update></Update></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5001/update/${params.id}`)
+          loader: ({params}) => fetch(`https://brand-shop-server-beryl-five.vercel.app/update/${params.id}`)
         },
         {
           path: '/cart',
           element: <PrivateRoute> <Cart></Cart></PrivateRoute>,
-          loader: () => fetch('http://localhost:5001/cart')
+          loader: () => fetch('https://brand-shop-server-beryl-five.vercel.app/cart')
         }
       ]
     },
