@@ -10,7 +10,7 @@ const Details = () => {
   const { name, image, brandName, description, price, rating, type } =
     selectedBrand;
   const notify = () => toast("Added To Cart");
-  const choosedProduct = selectedBrand;
+  const choosedProduct = {name, image, brandName, description, price, rating, type};
   const signedUser = user;
   console.log(choosedProduct, signedUser);
 
@@ -49,8 +49,7 @@ const Details = () => {
         pauseOnHover
         theme="light"
       />
-      ;
-      <ToastContainer />;
+      <ToastContainer />
       <div className="card  md:card-side bg-base-100 shadow-xl">
         <figure>
           <img src={image} alt={brandName} />

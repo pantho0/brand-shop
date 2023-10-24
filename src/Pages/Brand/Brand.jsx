@@ -57,7 +57,7 @@ const Brand = () => {
         { items.length > 0 ? (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 justify-between gap-4" >
             
-              {items.map(item => <SingleBrand key={item.i} item={item}></SingleBrand>)}
+              {items.map(item => <SingleBrand key={item._id} item={item}></SingleBrand>)}
               </div>
             ) 
             :

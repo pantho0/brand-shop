@@ -13,10 +13,12 @@ const Cart = () => {
   const orders = useLoaderData();
   console.log(orders);
 
-  const [userOrder, setOrder] = useState([]) || [];
+  const [userOrder, setOrder] = useState([]);
 
   const orderUser = orders.email;
   console.log(orderUser);
+
+  
 
   useEffect(() => {
     const getOrders = orders.filter((order) => order.email === signedUser);
@@ -24,12 +26,15 @@ const Cart = () => {
     setOrder(getOrders);
   }, [orders, signedUser]);
 
+  
+
+
   return (
     <div>
       <div className="px-10">
         {userOrder.length > 0 ? (
           userOrder.map((showOrders) => (
-            <OrdersCard key={showOrders._id} showOrders={showOrders}></OrdersCard>
+            <OrdersCard key={showOrders._id} showOrders={showOrders} userOrder={userOrder} setOrder={setOrder}></OrdersCard>
           )))
           :
           (<div className="h-screen flex justify-center items-center">
