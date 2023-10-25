@@ -1,8 +1,28 @@
-# React + Vite
+## Project Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Welcome to **Shop Brand**, a multi-page application (MPA) built using the MERN stack! 
+- This website allows users to create accounts, log in via Firebase with Google, add and update products, manage their shopping cart, and view their orders. 
+- The site offers a seamless experience with responsive design and real-time confirmation messages using toasts.
 
-Currently, two official plugins are available:
+**Live Site:** [Shop Brand](https://shop-brand-pantho.web.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- User authentication and account creation via Firebase with Google.
+- CRUD operations for products using MongoDB.
+- Real-time confirmation messages using toast notifications.
+- Responsive design for optimal user experience on various devices.
+- Add products to the cart and manage cart items.
+- View and delete orders from the cart.
+
+## Technologies Used
+
+### Frontend:
+- React for building the user interface.
+- Firebase for user authentication.
+- Toast notifications for real-time feedback.
+
+### Backend:
+- MongoDB for storing product data.
+- Express.js for handling API requests.
+- Node.js for server-side scripting.
