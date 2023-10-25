@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="navbar bg-white ">
+      <div className="navbar">
         <div className="navbar-start">
           <div className="dropdown z-10">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">

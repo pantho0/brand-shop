@@ -62,7 +62,7 @@ const Details = () => {
           <p>Type : {type}</p>
           <p>{description}</p>
           <div className="card-actions justify-end">
-            <button onClick={handleCart} className="btn btn-primary">
+            <button onClick={handleCart} className="btn btn-primary bg-black hover:bg-accent hover:text-black">
               Add To Cart
             </button>
           </div>

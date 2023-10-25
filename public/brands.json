@@ -1,18 +1,18 @@
 [
     {
-        "brandName": "Nike",
+        "brandName": "NIKE",
         "image": "https://i.ibb.co/wNNRPSd/nike.jpg"
     },
     {
-        "brandName": "Adidas",
+        "brandName": "ADIDAS",
         "image": "https://i.ibb.co/94zF2tv/adidas.jpg"
     },
     {
-        "brandName": "Gucci",
+        "brandName": "GUCCI",
         "image": "https://i.ibb.co/YPPjN3R/gucci.jpg"
     },
     {
-        "brandName": "Zara",
+        "brandName": "ZARA",
         "image": "https://i.ibb.co/zRwNZWJ/zara.jpg"
     },
     {
@@ -20,7 +20,7 @@
         "image": "https://i.ibb.co/gPsR1qk/h-m.jpg"
     },
     {
-        "brandName": "Levi's",
+        "brandName": "LEVIS",
         "image": "https://i.ibb.co/hRnwVxy/levis.jpg"
     }
 ]

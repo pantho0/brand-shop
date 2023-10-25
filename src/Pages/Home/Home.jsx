@@ -8,9 +8,22 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { useLoaderData } from "react-router-dom";
 import BrandCards from "../../Components/BrandCard/BrandCards";
+import { useEffect, useState } from "react";
 
 const Home = () => {
   const brands = useLoaderData();
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [isDarkMode]);
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    console.log("clicked");
+  };
   return (
     <>
       <div>
@@ -41,15 +54,17 @@ const Home = () => {
 
       <div className="mt-11">
         {/* Brands Section */}
-        <h2 className="text-4xl text-center">Available Brands</h2>
-        <div className="grid justify-center md:grid-cols-2 lg:grid-cols-3 gap-4 mt-20">
+        <h2 className="text-4xl text-center">
+          Available Brands
+        </h2> 
+        <div className="grid justify-center md:grid-cols-2 lg:grid-cols-3 gap-4 mt-20 ">
           {brands.map((brand) => (
             <BrandCards key={brand.i} brand={brand}></BrandCards>
           ))}
         </div>
 
         <div>
-          <div className="flex flex-col mt-4 md:flex-row items-center justify-center mt-4 gap-8">
+          <div className="flex flex-col mt-4 md:flex-row items-center justify-center mt-4 gap-8 ">
             <img
               src="filler-image-3.jpg"
               className="max-w-sm rounded-full shadow-2xl"
@@ -77,7 +92,7 @@ const Home = () => {
           </p>
           <input
             type="text"
-            placeholder="Enter Your Emai Here"
+            placeholder="Enter Your Email Here"
             className="input input-bordered input-md w-full max-w-xs text-black"
           />
           <button className="btn btn-outline btn-success ml-4">Sign Up</button>

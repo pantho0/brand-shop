@@ -4,6 +4,13 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  variants: {
+    extend: {
+      backgroundColor: ['dark'],
+      borderColor: ['dark'],
+      textColor: ['dark'],
+    },
+  },
   theme: {
     extend: {},
   },

@@ -16,7 +16,7 @@ const Update = () => {
         const form = e.target;
         const name = form.name.value;
         const image = form.image.value;
-        const brandName = form.brandName.value;
+        const brandName = form.brandName.value.toUpperCase();
         const type = form.type.value;
         const price = form.price.value;
         const description = form.description.value;
@@ -61,7 +61,7 @@ const Update = () => {
       />
       <ToastContainer />
         <div className="text-center text-4xl mt-18">
-          <h2>Add Product</h2>
+          <h2>Update Product</h2>
         </div>
         <div className="border border-dotted p-4">
           <form onSubmit={handleUpdate} className="space-y-4">
@@ -181,7 +181,7 @@ const Update = () => {
                 </label>
               </div>
   
-              <div className="relative flex h-10 w-full ">
+              <div className="relative flex h-10 w-full bg-black text-white rounded-[7px]">
                 <input
                   type="submit"
                   value="Update Product"
